@@ -162,6 +162,7 @@
 - (void)bannerView:(GAMBannerView *)bannerView
     didReceiveAppEvent:(NSString *)name
               withInfo:(nullable NSString *)info {
+  NSLog(@"!!!! Received App Event %@", name);
   [self sendEvent:@"onAppEvent"
           payload:@{
             @"name" : name,
